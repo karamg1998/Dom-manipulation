@@ -33,13 +33,13 @@ function Run(e){
         
         new_element.id=data.Email;
        
-        var data1=document.createTextNode("=>Expense:"+data.Name+"-");
+        var data1=document.createTextNode("=>Name:"+data.Name+"-");
         new_element.appendChild(data1);
     
-        var data2=document.createTextNode("Description:"+data.Email+"-");
+        var data2=document.createTextNode("Email:"+data.Email+"-");
         new_element.appendChild(data2);
     
-        var data3=document.createTextNode("Category:"+data.Phone+" ");
+        var data3=document.createTextNode("Phone:"+data.Phone+" ");
         new_element.appendChild(data3);
     
     
@@ -58,8 +58,8 @@ function Run(e){
 
    
     
-var delete_expense=document.querySelector('.container');
-delete_expense.addEventListener('click',run2);
+var dele=document.querySelector('.container');
+del.addEventListener('click',run2);
 
 
 
@@ -68,7 +68,7 @@ function run2(e)
     if(e.target.classList.contains('delete'))
     {
         var li=e.target.parentElement;
-        delete_expense.removeChild(li);
+        del.removeChild(li);
         var id=li.id;
         
         for(var i=0;i<localStorage.length;i++)
